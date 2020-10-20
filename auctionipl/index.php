@@ -23,6 +23,14 @@ include('logout.php');
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto right">
+
+    </ul>
+    <ul class="nav-item navbar-nav navbar-right nav-pills">
+    <button type="button" class="btn btn-lg green navlink" data-toggle="modal" data-target="#loginModaladmin">BCCI Admin Login</button>
+    </ul>
+  </div>
 </nav>
 <div class="container " id="top">
   <p><strong>Auctioner Login details</strong> and Team owner Login Details have been sent to their respective mail ID's by BCCI</p>
@@ -32,16 +40,16 @@ include('logout.php');
   <div class="jumbotron" id="myContainer">
       <div class="row">
         <div class="col-md-4 pl0">
-          <h1>Auctioner Login</h1>
+          <h1><strong>Auctioner Login</strong></h1>
           <button type="button" class="btn btn-lg green signup" data-toggle="modal" data-target="#loginModalauct">Login</button>
     </div>
     <div class="col-md-4 pl1">
-        <h1>Player Account </h1>
+        <h1><strong>Player Account</strong> </h1>
         <button type="button" class="btn btn-lg green signup" data-toggle="modal" data-target="#signupModal">Sign up</button><br>
         <button type="button" class="btn btn-lg green signup" data-toggle="modal" data-target="#loginModal">Login</button>
     </div>
     <div class="col-md-4 pl2">
-        <h1>Team Owner Login</h1>
+        <h1><strong>Team Owner Login</strong></h1>
       <button type="button" class="btn btn-lg green signup" data-toggle="modal" data-target="#loginModalowner">Login</button>
     </div>
   </div>
@@ -207,6 +215,44 @@ include('logout.php');
   </div>
   </div>
   </form>
+  <!--Bcci admin Login form-->
+    <form method="post" id="loginformadmin">
+   <!-- Modal -->
+  <div class="modal fade" id="loginModaladmin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Admin Log In</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <!--Login message from PHP file-->
+      <div id="loginmessageadmin"></div>
+      <div class="form-group">
+          <label for="loginemailadmin" class="sr-only">Email:</label>
+          <input class="form-control" type="email" name="loginemailadmin" id="loginemailadmin" placeholder="Email" maxlength="50">
+      </div>
+      <div class="form-group">
+          <label for="loginpasswordadmin" class="sr-only">Password</label>
+          <input class="form-control" type="password" name="loginpasswordadmin" id="loginpasswordadmin" placeholder="Password" maxlength="30">
+      </div>
+
+    </div>
+    <div class="modal-footer">
+        <input class="btn green" name="login" type="submit" value="Login">
+      <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancel
+      </button>
+
+    </div>
+  </div>
+  </div>
+  </div>
+  </form>
+
 
 
 

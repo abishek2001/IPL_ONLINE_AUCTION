@@ -6,19 +6,19 @@ include("connection.php");
 //Check user inputs
     //Define error messages
     $errors='';
-$missingEmail = '<p><stong>Please enter your email address Auctioner!</strong></p>';
-$missingPassword = '<p><stong>Please enter your password Auctioner!</strong></p>';
+$missingEmail = '<p><stong>Please enter your email address!</strong></p>';
+$missingPassword = '<p><stong>Please enter your password!</strong></p>';
 //Get email and password
 //Store errors in errors variable
-if(empty($_POST["loginemail1"])){
+if(empty($_POST["loginemailadmin"])){
 $errors .= $missingEmail;
 }else{
-$email = filter_var($_POST["loginemail1"], FILTER_SANITIZE_EMAIL);
+$email = filter_var($_POST["loginemailadmin"], FILTER_SANITIZE_EMAIL);
 }
-if(empty($_POST["loginpassword1"])){
+if(empty($_POST["loginpasswordadmin"])){
     $errors .= $missingPassword;
 }else{
-    $password = filter_var($_POST["loginpassword1"], FILTER_SANITIZE_STRING);
+    $password = filter_var($_POST["loginpasswordadmin"], FILTER_SANITIZE_STRING);
 }
 //If there are any errors
 if($errors){
@@ -29,9 +29,9 @@ if($errors){
   //Prepare variables for the query
   $email = mysqli_real_escape_string($link, $email);
 $password = mysqli_real_escape_string($link, $password);
-$password = md5($password);
+
       //Run query: Check combinaton of email & password exists
-$sql = "SELECT * FROM adminusers WHERE email='$email' AND password='$password' ";
+$sql = "SELECT * FROM bcciuser WHERE email='$email' AND password='$password' ";
 $result = mysqli_query($link, $sql);
 if(!$result){
   echo '<div class="alert alert-danger">Error running the query!</div>';

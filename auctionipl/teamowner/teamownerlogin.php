@@ -29,7 +29,7 @@ if($errors){
   //Prepare variables for the query
   $email = mysqli_real_escape_string($link, $email);
 $password = mysqli_real_escape_string($link, $password);
-
+$password = md5($password);
       //Run query: Check combinaton of email & password exists
 $sql = "SELECT * FROM teamownerusers WHERE email='$email' AND password='$password' ";
 $result = mysqli_query($link, $sql);

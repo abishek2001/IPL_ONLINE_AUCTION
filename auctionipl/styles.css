@@ -32,13 +32,32 @@ body{
 }
 .jumbotron{
     width: 90%;
+
+
+   background: rgba(200, 255, 255, 0.5);
+
     text-align: center;
     letter-spacing: 2.5px;
     padding: 1px;
     margin-top: 6%;
     margin-left: 5%;
 }
-
+.pl0 {
+   border: 1px solid #333333;
+ border-left: 0px;
+border-top: 0px;
+border-bottom: : 0px;
+}
+   .pl1{
+      border: 1px solid #333333;
+     border-top: 0px;
+     border-bottom: : 0px;}
+      .pl2{
+         border: 1px solid #333333;
+       border-right: 0px;
+      border-top: 0px;
+      border-bottom: : 0px;
+    }
 /*buttons*/
 .signup{
     margin-top: 40px;
@@ -51,15 +70,8 @@ body{
 .green:hover{
     background-color:#25a7da;
 }
-.pl0{
-  background-color: #ffc966;
-}
-.pl1{
-  background-color: white;
-}
-.pl2{
-  background-color: #70db70;
-}
+
+
 .pull-right{
   float: right;
 }

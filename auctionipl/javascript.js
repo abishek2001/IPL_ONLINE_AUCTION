@@ -108,3 +108,84 @@ $("#loginformowner").submit(function(event){
     });
 
 });
+
+//Ajax Call for the Bcci admin login form
+//Once the form is submitted
+$("#loginformadmin").submit(function(event){
+    //prevent default php processing
+    event.preventDefault();
+    //collect user inputs
+    var datatopost = $(this).serializeArray();
+//    console.log(datatopost);
+    //send them to login.php using AJAX
+    $.ajax({
+        url: "bcciadmin/bcciuserlogin.php",
+        type: "POST",
+        data: datatopost,
+        success: function(data){
+            if(data == "success"){
+                window.location = "mainpageloggedinadminbcci.php";
+            }else{
+                $('#loginmessageadmin').html(data);
+            }
+        },
+        error: function(){
+            $("#loginmessageadmin").html("<div class='alert alert-danger'>There was an error with the Ajax Call. Please try again later.</div>");
+
+        }
+
+    });
+
+});
+//Ajax Call for the auctioner sign up form
+//Once the form is submitted
+$("#signupformauct").submit(function(event){
+    //prevent default php processing
+    event.preventDefault();
+    //collect user inputs
+    var datatopost = $(this).serializeArray();
+//    console.log(datatopost);
+    //send them to signup.php using AJAX
+    $.ajax({
+        url: "bcciadmin/auctionersignup.php",
+        type: "POST",
+        data: datatopost,
+        success: function(data){
+            if(data){
+                $("#signupmessageauct").html(data);
+            }
+        },
+        error: function(){
+            $("#signupmessageauct").html("<div class='alert alert-danger'>There was an error with the Ajax Call. Please try again later.</div>");
+
+        }
+
+    });
+
+});
+//Ajax Call for the team owner sign up form
+//Once the form is submitted
+$("#signupformowner").submit(function(event){
+    //prevent default php processing
+    event.preventDefault();
+    //collect user inputs
+    var datatopost = $(this).serializeArray();
+//    console.log(datatopost);
+    //send them to signup.php using AJAX
+    $.ajax({
+        url: "bcciadmin/teamownersignup.php",
+        type: "POST",
+        data: datatopost,
+        success: function(data){
+            if(data){
+                $("#signupmessageowner").html(data);
+            }
+        },
+        error: function(){
+            $("#signupmessageowner").html("<div class='alert alert-danger'>There was an error with the Ajax Call. Please try again later.</div>");
+
+        }
+
+    });
+
+});
