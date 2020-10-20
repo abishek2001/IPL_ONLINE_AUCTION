@@ -1,0 +1,76 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    font-family: Arvo, serif;
+    background: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1167&q=80") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#top {
+  margin-top: 4%;
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+#topp {
+  margin-top: 3%;
+  background-color: yellow;
+  width:47%;
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+#bottom {
+  margin-top: 4%;
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.jumbotron{
+    width: 90%;
+    text-align: center;
+    letter-spacing: 2.5px;
+    padding: 1px;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+/*buttons*/
+.signup{
+    margin-top: 40px;
+}
+
+.green{
+    background-color: #51b8e1;
+}
+
+.green:hover{
+    background-color:#25a7da;
+}
+.pl0{
+  background-color: #ffc966;
+}
+.pl1{
+  background-color: white;
+}
+.pl2{
+  background-color: #70db70;
+}
+.pull-right{
+  float: right;
+}
+
+a.pull-right{
+  float: right;
+}
+a.pull-right:hover{
+  float: right;
+  color: blue;
+}
+.right1{
+  float: right;
+}
