@@ -2,7 +2,7 @@
 
 Developed using PHP,MySQL,Jquery
 
-*Database hasn't been included*
+
 
 
 How To Run??
